@@ -41,6 +41,7 @@ func main() {
 	var n1 = 100
 	//可以用Printf 做格式化输出
 	fmt.Printf("n1 的类型是：%T \n", n1)
+	fmt.Printf("n1 占用的字节数是 %d \n", unsafe.Sizeof(n1))
 
 	//n2占用的字节大小和数据乐行
 	var n2 int64 = 10
@@ -49,4 +50,5 @@ func main() {
 	//保证程序运行正确的情况下，尽量使用占用空间小的数据
 	var age byte = 90
 	fmt.Println(age)
+
 }
