@@ -34,4 +34,7 @@ func main() {
 
 	//使用字节缓冲（bytes.Buffer）拼接
 
+	//字符串长度
+	i := len(s)
+	fmt.Println(i)
 }
