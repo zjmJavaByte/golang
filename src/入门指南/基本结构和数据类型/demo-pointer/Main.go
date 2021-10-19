@@ -17,7 +17,8 @@ func main() {
 	fmt.Println(intP)
 	//intP 存储了 i1 的内存地址；它指向了 i1 的位置，它引用了变量 i1
 	intP = &i1
-	fmt.Printf("it's location in memory: %p\n", intP)
+	fmt.Printf("it's location in memory: %p %v\n", intP, intP)
+	fmt.Println(intP)
 
 	//符号 * 可以放在一个指针前，如 *intP，那么它将得到这个指针指向地址上所存储的值；这被称为反引用（或者内容或者间接引用）操作符
 	fmt.Println(*intP)
