@@ -13,7 +13,16 @@ var screen [WIDTH][HEIGHT]pixel
 
 func main() {
 
-	//数组长度最大为 2Gb
+	/**
+	定义：
+	1、同构的数据结构
+	2、数组长度也是数组类型的一部分，所以 [5] int 和 [10] int 是属于不同类型的
+	3、数组长度必须是一个常量表达式，并且必须是一个非负整数
+	4、数组长度最大为 2Gb
+	格式：
+	var identifier [len]type  --》》 var arr1 [5]int
+	var identifier new([len]type) --》》 var arr1 = new([5]int)
+	*/
 
 	a := [...]string{"a", "b", "c", "d"}
 	slice := []int{7, 9, 3, 5, 1}
@@ -37,6 +46,8 @@ func main() {
 	fmt.Println(*arr1)                 //[0 0 0 0 0]  符号 * 可以放在一个指针前，如 *intP，那么它将得到这个指针指向地址上所存储的值
 	//进行值得拷贝
 	arr3 := *arr1
+	arr33 := arr1
+	fmt.Printf("%p %T \n", arr33, arr33)
 	arr3[2] = 100
 	//地址拷贝
 	arr4 := &arr2
@@ -71,6 +82,10 @@ func main() {
 	}
 	fmt.Println("-------")
 
+	/**
+	练习 7.3：fibonacci_array.go: 在第 6.6 节我们看到了一个递归计算 Fibonacci 数值的方法。
+	但是通过数组我们可以更快的计算出 Fibonacci 数。完成该方法并打印出前 50 个 Fibonacci 数字
+	*/
 	var arr8 [50]int
 	arr8[0] = 1
 	arr8[1] = 1
