@@ -32,7 +32,7 @@ var m = map[TZ]string{
 	CST: "Central Standard time"}
 
 const (
-	MO Day = iota
+	MO Day = iota //关于iota  https://studygolang.com/articles/2192
 	TU
 	WE
 	TH

@@ -13,6 +13,14 @@ type TwoInts struct {
 func main() {
 
 	/*
+		默认会调用String()方法的输出：
+			fmt.Printf()
+			fmt.Print()
+			fmt.Println()
+			fmt.Sprintf()
+	*/
+
+	/*
 		自定义string()方法
 	*/
 	two1 := new(TwoInts)
@@ -20,9 +28,10 @@ func main() {
 	two1.b = 10
 	fmt.Printf("two1 is: %v\n", two1)
 	fmt.Println("two1 is:", two1)
-	fmt.Printf("two1 is: %T\n", two1)
-	fmt.Printf("two1 is: %#v\n", two1)
-	fmt.Println(two1.String())
+	fmt.Printf("two1 is: %T\n", two1)  //%T 会给出类型的完全规格
+	fmt.Printf("two1 is: %#v\n", two1) //%#v 会给出实例的完整输出，包括它的字段
+	fmt.Println(two1)
+	fmt.Sprintf("two1 is: %v\n", two1)
 
 	/*
 		注意事项
